@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>PLANET</title>
+    <meta charset="utf-8">
+    <meta name="description" content="仅仅是关于我的小行星">
+    <style>
+        .titleBig {
+            text-align: center;
+            color: #0F4C81;
+            font-size: 36px;
+        }
+
+        .borderRoutine {
+            border-style: solid;
+            border-color: #0F4C81;
+            border-width: 1px;
+            margin: 10px;
+            height: 85%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .center {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .padding{
+            text-align: center;
+            padding: 20px;
+            color: #0F4C81;
+        }
+
+        li {
+            display: inline;
+            padding: 10px 150px;
+            background-color: #e0e8f0;
+            color: #0F4C81;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li:hover,
+        li:active {
+            background-color: #1D4E89;
+            color: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a,
+        a:visited {
+            text-decoration: none;
+            color: #1D4E89;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="titleBig">PLANET</h1>
+    <div class="borderRoutine">
+        <div class="center">
+            <li id="learn" onclick="display(this)">学到头秃</li>
+            <li id="buy" onclick="display(this)">只想花钱</li>
+            <li id="play" onclick="display(this)">浪费生命</li>
+        </div>
+        <hr style="color: #1D4E89; width: 90%;">
+        <div class="center" style="position: relative;top:100px;">
+            <p class="padding">
+                <a target="_blank" title="" id="linkAddress" onclick="jump(this)" class="padding">nothing</a>
+            </p>
+            <p class="padding">
+                <a target="_blank" title="" id="linkAddress1" onclick="jump(this)" class="padding"></a>
+            </p>
+            <p class="padding">
+                <a target="_blank" title="" id="linkAddress2" onclick="jump(this)" class="padding"></a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var str = "这是个没什么用的网站 LITTLE PLANET";
+        alert(str);
+
+        function display(a) {
+            switch (a.id) {
+                case "learn":
+                    document.getElementById("linkAddress").innerHTML = "JavaScript教程";
+                    document.getElementById("linkAddress").href = "https://www.runoob.com/js/js-functions.html";
+                    document.getElementById("linkAddress").title = "https://www.runoob.com/js/js-functions.html";
+                    document.getElementById("linkAddress1").innerHTML = "html教程";
+                    document.getElementById("linkAddress1").href = "https://www.runoob.com/html/html-links.html";
+                    document.getElementById("linkAddress1").title = "https://www.runoob.com/html/html-links.html";
+                    document.getElementById("linkAddress2").innerHTML = "CSS教程";
+                    document.getElementById("linkAddress2").href = "https://www.runoob.com/css/css-tutorial.html";
+                    document.getElementById("linkAddress2").title = "https://www.runoob.com/css/css-tutorial.html";
+                    break;
+                case "buy":
+                    document.getElementById("linkAddress").innerHTML = "balenciaga".toUpperCase();
+                    document.getElementById("linkAddress").href = "https://www.balenciaga.cn/";
+                    document.getElementById("linkAddress").title = "https://www.balenciaga.cn/";
+                    document.getElementById("linkAddress1").innerHTML = "HERMES";
+                    document.getElementById("linkAddress1").href ="https://www.hermes.cn/cn/zh/";
+                    document.getElementById("linkAddress1").title = "https://www.hermes.cn/cn/zh/";
+                    document.getElementById("linkAddress2").innerHTML = "GUCCI";
+                    document.getElementById("linkAddress2").href = "https://www.gucci.cn/zh/";
+                    document.getElementById("linkAddress2").title = "https://www.gucci.cn/zh/";
+                    break;
+                case "play":
+                    document.getElementById("linkAddress").innerHTML = "b站";
+                    document.getElementById("linkAddress").href = "https://www.bilibili.com/";
+                    document.getElementById("linkAddress").title = "https://www.bilibili.com/";
+                    document.getElementById("linkAddress1").innerHTML = "";
+                    document.getElementById("linkAddress1").href = null;
+                    document.getElementById("linkAddress1").title = null;
+                    document.getElementById("linkAddress2").innerHTML = "";
+                    document.getElementById("linkAddress2").href = null;
+                    document.getElementById("linkAddress2").title = null;
+                    break;
+            }
+        }
+
+        function jump(a){
+            if(a.href==null){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
